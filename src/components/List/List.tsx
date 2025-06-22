@@ -1,16 +1,21 @@
 import {Component} from "react";
-import Item from "../Item/Item.tsx";
+import Item, {type Todo} from "../Item/Item.tsx";
 import "./List.css"
 
-export default class List extends Component {
+interface Props {
+    todos:Todo[]
+}
+
+export default class List extends Component<Props> {
     render() {
+
+        const {todos} = this.props
+
         return (
             <ul className="todo-main">
-                <Item/>
-                <Item/>
-                <Item/>
-                <Item/>
-                <Item/>
+                {todos.map((item)=>{
+                    return <Item key={item.id} todo={item}/>
+                })}
             </ul>
         )
     }
