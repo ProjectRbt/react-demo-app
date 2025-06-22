@@ -1,0 +1,16 @@
+
+
+.todo-footer {
+
+    padding: 8px;
+
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+}
+
+.todo-footer .content {
+    flex: 1;
+}
+

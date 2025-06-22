@@ -1,0 +1,12 @@
+
+
+.todo-main {
+
+    flex: 1;
+
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+    display: flex;
+    flex-direction: column;
+}

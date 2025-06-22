@@ -1,0 +1,19 @@
+
+
+.todo-header {
+    padding: 0;
+    display: flex;
+
+
+}
+
+.todo-header input {
+    margin: 0;
+    width: 100%;
+    background-color: transparent;
+    height: 32px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
