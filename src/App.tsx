@@ -22,13 +22,23 @@ export default class App extends Component<{}, States> {
 
     }
 
+    addItem = (value:string)=>{
+        const {todos} = this.state
+        const item:Todo = {
+            id: todos.length+1,
+            name: value,
+            done: false
+        }
+        this.setState({todos:[item,...todos]})
+    }
+
 
     render() {
         const {todos} = this.state
         return (
             <div className="todo-container">
                 <div className="todo-wrap">
-                    <Header/>
+                    <Header setItem={this.addItem}/>
                     <List todos={todos}/>
                     <Footer/>
                 </div>
