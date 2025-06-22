@@ -8,8 +8,11 @@ import List from "./components/List/List.tsx";
 interface States {
     todos: Todo[]
 }
+interface AppProps {
+    [key:string]:string
+}
 
-export default class App extends Component<{}, States> {
+export default class App extends Component<AppProps, States> {
 
 
     state: States = {
@@ -41,7 +44,7 @@ export default class App extends Component<{}, States> {
     }
 
     // 每次 state 更新后自动保存
-    componentDidUpdate(_prevProps: {}, prevState: States) {
+    componentDidUpdate(_prevProps: AppProps, prevState: States) {
         if (prevState.todos !== this.state.todos) {
             this.saveTodos(this.state.todos);
         }
