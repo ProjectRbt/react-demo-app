@@ -2,7 +2,8 @@
 
 .todo-footer {
 
-    padding: 8px;
+
+    height: 32px;
 
     display: flex;
     gap: 8px;
@@ -14,3 +15,8 @@
     flex: 1;
 }
 
+.todo-footer input[type="checkbox"] {
+    width: 16px;
+    height: 100%;
+    accent-color: #0072FE;
+}
